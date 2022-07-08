@@ -23,12 +23,13 @@ $(document).keypress(function() {
 
 //User Click Tracker
 $(".drum").click(function() {
+  if(level > 0){
   var userChosenDrum = $(this).attr("id");
   userDrumPattern.push(userChosenDrum);
   playSound(userChosenDrum);
   animatePress(userChosenDrum);
   checkAnswer(userDrumPattern.length - 1);
-});
+}});
 
 //Check user action + next step
 function checkAnswer(currentLevel) {
