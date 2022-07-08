@@ -21,6 +21,13 @@ $(document).keypress(function() {
       }
     });
 
+$(".startGame").click(function() {
+    if (!started) {
+      $("#level-title").text("Level " + level);
+      nextSequence();
+      started = true;
+    }});
+
 //User Click Tracker
 $(".drum").click(function() {
   if(level > 0){
